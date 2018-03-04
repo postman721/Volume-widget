@@ -18,7 +18,7 @@ class Second(QWidget):
 #Label.        
         self.label = QLabel()
         self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setStyleSheet("color:#f1ff0e; background-color:#6b6b6b; font-size: 16px;")                      
+        self.label.setStyleSheet("background-color:#353535; color:#26A65B; font-size: 16px;")                      
 
 #Make Layout.
         self.adjustSize() 
@@ -62,7 +62,7 @@ class MainWindow(QMainWindow):
 #Set geometry and move the window.
         #self.geometry(left coordinate, top coordinate. object width, object height).
         self.left=20
-        self.top=40
+        self.top=80
         self.w=140
         self.h=60 
         self.setGeometry(self.left, self.top, self.w, self.h)

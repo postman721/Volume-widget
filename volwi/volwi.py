@@ -18,7 +18,7 @@ class Second(QWidget):
 #Label.        
         self.label = QLabel()
         self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setStyleSheet("background-color:#353535; color:#26A65B; font-size: 16px;")                      
+        self.label.setStyleSheet("background-color:#232323; color:#26A65B; font-size: 16px;")                      
 
 #Make Layout.
         self.adjustSize() 
@@ -28,7 +28,7 @@ class Second(QWidget):
 #Check label value and update it every n milliseconds.                    
     def changeLabel(self):
         #Volume
-        self.initial1=subprocess.Popen(['bash', 'mixer.sh'], stdout=subprocess.PIPE) #Using Popen and piping subprocess to standard output.
+        self.initial1=subprocess.Popen(['bash', '/usr/share/volwi/mixer.sh'], stdout=subprocess.PIPE) #Using Popen and piping subprocess to standard output.
         self.initial2=self.initial1.stdout.read() #Reading the standard output.
         self.initial3=int(self.initial2) #Changing to integrer.                 
         #Set Label text
@@ -52,7 +52,7 @@ class MainWindow(QMainWindow):
         		
 #Set window title. Set window style.		
         self.setWindowTitle("VolWi")
-        self.setStyleSheet("color:#ffffff; background-color:#6b6b6b;font-size: 12px;")
+        self.setStyleSheet("color:#ffffff; background-color:#232323;font-size: 12px;")
 
 #Set MainWindow Size attributes and remove the frame.		
         self.setMinimumSize(QtCore.QSize(145, 40))
